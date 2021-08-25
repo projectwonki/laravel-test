@@ -10,11 +10,11 @@ class Order extends Model
 
     public function store()
     {
-        $this->belongsTo('App\Models\Store', 'store_id');
+        return $this->belongsTo('App\Models\Store', 'store_id');
     }
 
     public function product()
     {
-        $this->belongsTo('App\Models\Product', 'product_id');
+        return $this->belongsTo('App\Models\Product', 'product_id');
     }
 }

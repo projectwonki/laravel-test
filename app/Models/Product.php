@@ -12,4 +12,9 @@ class Product extends Model
     {
         return $this->belongsTo('App\Models\Supplier', 'supplier_id');
     }
+
+    public function order()
+    {
+        return $this->hasMany('App\Models\Order', 'product_id','id');
+    }
 }

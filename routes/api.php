@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::prefix('store')->group(function () {
 
-    Route::post('registration', 'Api\StoreController@store');
+    Route::post('registration', 'Api\StoreController@register');
 
     Route::post('email/verification', 'Api\StoreController@verification');
 

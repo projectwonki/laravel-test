@@ -41,6 +41,9 @@ class OrderController extends Controller
 
             $data_request =json_decode(json_encode($request->all()),TRUE);
 
+            // dd($data_request);
+            $arr_answer = $data_request['data'];
+
             if ($data_request === []) {
 
                 $response = [
@@ -52,11 +55,11 @@ class OrderController extends Controller
 
             }
 
-            foreach ($data_request as $key_dr => $row_dr) {
+            foreach ($arr_answer as $key_dr => $row_dr) {
 
                 $new_order = new Order;
 
-                $new_order->store_id = \Auth::guard('store')->id();
+                $new_order->store_id = \Auth::guard('api')->id();
                 $new_order->product_id = $row_dr['product_id'];
                 $new_order->order = $row_dr['order_total'];
                 $new_order->is_approve = 0;

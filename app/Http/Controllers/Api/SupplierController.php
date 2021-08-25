@@ -9,7 +9,7 @@ use App\Models\Supplier;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
-class SuplierController extends Controller
+class SupplierController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -218,7 +218,7 @@ class SuplierController extends Controller
 
             $product_order = array();
 
-            $order = Order::where('is_active', $is_active)->get();
+            $order = Order::where('is_approve', $is_active)->get();
 
             if ($order->count() > 0) {
 

@@ -11,6 +11,7 @@ use Validator;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use JWTAuth;
+use Illuminate\Support\Arr;
 
 class StoreController extends Controller
 {
@@ -43,7 +44,7 @@ class StoreController extends Controller
     public function login(Request $request)
     {
         $credentials = request(['email', 'password']);
-        $credentials = Arr::add($credentials, 'status', '2');
+        $credentials = Arr::add($credentials, 'is_active', '1');
 
         if($token = JWTAuth::attempt($credentials))
         {
@@ -85,9 +86,9 @@ class StoreController extends Controller
                 'password' => [
                         'required',
                         'min:8',             // must be at least 10 characters in length
-                        'regex:/[a-z]/',      // must contain at least one lowercase letter
-                        'regex:/[A-Z]/',      // must contain at least one uppercase letter
-                        'regex:/[0-9]/',      // must contain at least one digit
+                        // 'regex:/[a-z]/',      // must contain at least one lowercase letter
+                        // 'regex:/[A-Z]/',      // must contain at least one uppercase letter
+                        // 'regex:/[0-9]/',      // must contain at least one digit
                     ],
                 'password_confirmation' => 'required|same:password',
             ],
@@ -122,7 +123,7 @@ class StoreController extends Controller
                 $new_store->password = bcrypt($data_request['password']);
                 $new_store->random_code = str::random(5);
                 $new_store->is_active = 0;
-                $new_store->password = date('Y-m-d H:i:s');
+                $new_store->created_at = date('Y-m-d H:i:s');
                 $new_store->save();
 
                 $to_name = $new_store->name;
@@ -136,14 +137,13 @@ class StoreController extends Controller
                 Mail::send('email.confirm_email', $sendData, function($message) use ($to_name, $to_email) {
                     $message->to($to_email, $to_name)
                     ->subject("Register Toko");
-                    $message->from('noreply@mail.com','Toko Umat');
+                    $message->from('noreply@gmail.com','Toko Umat');
                 });
 
                 $response = [
                     'code' => 200,
                     'success' => true,
                     'message' => 'Selamat, Pendaftaran toko berhasil. Silahkan Konfirmasi melalui email',
-                    'data' => $data
                 ];
                 return response()->json($response, 200);
 
@@ -249,20 +249,20 @@ class StoreController extends Controller
 
             $data_request =json_decode(json_encode($request->all()),TRUE);
             $validator = Validator::make($request->all(), [
-                'email' => 'required|email|unique:App\Models\Store,email',
+                'email' => 'required|email',
                 'new_password' => [
                         'required',
                         'min:8',             // must be at least 10 characters in length
-                        'regex:/[a-z]/',      // must contain at least one lowercase letter
-                        'regex:/[A-Z]/',      // must contain at least one uppercase letter
-                        'regex:/[0-9]/',      // must contain at least one digit
+                        // 'regex:/[a-z]/',      // must contain at least one lowercase letter
+                        // 'regex:/[A-Z]/',      // must contain at least one uppercase letter
+                        // 'regex:/[0-9]/',      // must contain at least one digit
                     ],
                 'password_confirmation' => 'required|same:new_password',
             ],
             [
                 'email.required' => 'Email Wajib diisi',
-                'email.unique' => 'Email anda sudah register silahkan login',
-                'email.email' => 'Format email tidak sesuai',
+                // 'email.unique' => 'Email anda sudah register silahkan login',
+                // 'email.email' => 'Format email tidak sesuai',
                 'password.required' => 'Password Wajib Diisi',
                 'password.min' => 'Maaf kata sandi tidak sesuai kriteria. Kata sandi 8 karakter, ada huruf, angka dan huruf besar',
                 'password.regex' => 'Maaf kata sandi tidak sesuai kriteria. Kata sandi 8 karakter, ada huruf, angka dan huruf besar',
