@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <filter id="Path_1023" x="2" y="2" width="47" height="47" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="ic-wa-bullet" transform="translate(-1339 -674)">
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="25" cy="25" r="25" transform="translate(1339 674)" fill="#55cd6c"/>
+    <g id="whatsapp_1_" data-name="whatsapp(1)" transform="translate(1350 685)">
+      <g transform="matrix(1, 0, 0, 1, -11, -11)" filter="url(#Path_1023)">
+        <path id="Path_1023-2" data-name="Path 1023" d="M0,29l2-7.25A14.423,14.423,0,0,1,14.45,0,14.565,14.565,0,0,1,29,14.4,14.738,14.738,0,0,1,14.45,29,14.556,14.556,0,0,1,7.4,27Z" transform="translate(11 11)" fill="#fff"/>
+      </g>
+      <path id="Path_1024" data-name="Path 1024" d="M49.438,66.038l.45.25a11.872,11.872,0,0,0,6.25,1.85,12.122,12.122,0,0,0,12-12.1,12,12,0,0,0-24,0,12.112,12.112,0,0,0,1.85,6.45l.3.45-1.15,4.2Z" transform="translate(-41.638 -41.638)" fill="#55cd6c"/>
+      <path id="Path_1025" data-name="Path 1025" d="M132.963,135.112l-.95-.05a1.135,1.135,0,0,0-.8.3,4.142,4.142,0,0,0-1.4,2.15c-.35,1.5.2,3.3,1.5,5.1a15.152,15.152,0,0,0,8.2,5.95,4.062,4.062,0,0,0,3.4-.4,2.95,2.95,0,0,0,1.3-1.9l.15-.7a.5.5,0,0,0-.25-.55l-3.15-1.45a.477.477,0,0,0-.6.15l-1.25,1.6a.389.389,0,0,1-.4.1,9.717,9.717,0,0,1-5.25-4.5.377.377,0,0,1,.05-.4l1.2-1.35a.616.616,0,0,0,.1-.5l-1.45-3.25a.436.436,0,0,0-.4-.3" transform="translate(-122.363 -127.412)" fill="#fefefe"/>
+    </g>
+  </g>
+</svg>

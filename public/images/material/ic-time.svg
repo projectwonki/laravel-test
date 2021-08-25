@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="ic-time" transform="translate(-1153.002 -60)">
+    <rect id="Rectangle_78" data-name="Rectangle 78" width="16" height="16" transform="translate(1153.002 60)" fill="none"/>
+    <g id="time_1_" data-name="time(1)" transform="translate(1154.002 61)">
+      <path id="Path_1035" data-name="Path 1035" d="M7,0a7,7,0,1,0,7,7A7.008,7.008,0,0,0,7,0ZM7,13.125A6.125,6.125,0,1,1,13.125,7,6.132,6.132,0,0,1,7,13.125Z" fill="#505050"/>
+      <path id="Path_1036" data-name="Path 1036" d="M259.217,137.783h-.875v3.681l2.316,2.316.619-.619-2.059-2.059Z" transform="translate(-251.779 -134.283)" fill="#505050"/>
+    </g>
+  </g>
+</svg>

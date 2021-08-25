@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="ic-email" transform="translate(-1153.002 -60)">
+    <rect id="Rectangle_78" data-name="Rectangle 78" width="24" height="24" transform="translate(1153.002 60)" fill="none"/>
+    <g id="email_2_" data-name="email(2)" transform="translate(1153.002 -4)">
+      <g id="Group_1741" data-name="Group 1741" transform="translate(0 68)">
+        <g id="Group_1740" data-name="Group 1740" transform="translate(0 0)">
+          <path id="Path_1018" data-name="Path 1018" d="M20.436,68H2.713A2.716,2.716,0,0,0,0,70.713V82.287A2.716,2.716,0,0,0,2.713,85H20.436a2.716,2.716,0,0,0,2.713-2.713V70.713A2.716,2.716,0,0,0,20.436,68Zm.9,14.287a.905.905,0,0,1-.9.9H2.713a.905.905,0,0,1-.9-.9V70.713a.905.905,0,0,1,.9-.9H20.436a.905.905,0,0,1,.9.9Z" transform="translate(0 -68)" fill="#505050"/>
+        </g>
+      </g>
+      <g id="Group_1743" data-name="Group 1743" transform="translate(0.883 69.127)">
+        <g id="Group_1742" data-name="Group 1742" transform="translate(0 0)">
+          <path id="Path_1019" data-name="Path 1019" d="M39.826,92.937l-9.612,7.15L20.6,92.937l-1.079,1.451,10.692,7.953,10.692-7.953Z" transform="translate(-19.522 -92.937)" fill="#505050"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
