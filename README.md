@@ -47,3 +47,7 @@ disini saya menyediakan opsi untuk menggunakan database yang sudah ada ataupun m
 jika ingin menggunakan database yang sudah ada, bisa didump file data.sql yang sudah saya sediakan di folder database/. 
 
 jika ingin menggunakan data kosong dari awal, dapat menjalankan command php artisan migrate seperti biasa
+
+## CMS
+
+untuk mengakses manajemen role, bisa menggunakan credential berikut : root / root123
