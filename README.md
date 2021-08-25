@@ -10,19 +10,23 @@ berikut adalah step by step penggunaan aplikasi sederhana untuk manajemen toko, 
 
 4. running command untuk generate key jwt -> php artisan jwt:secret
 
-5. running command untuk seeder -> php artisan db:seed --class=UserSeeder
+5. running command untuk migration database -> php artisan migrate
 
-6. running command -> php artisan serve
+notes: untuk penggunaan database yang sudah ada dapat dilihat petunjuk pada section DATABASE paling bawah
 
-7. untuk manage content toko, supplier, product, order, silahkan buka url http://127.0.0.1:8000/admin-panel
+6. running command untuk seeder -> php artisan db:seed --class=UserSeeder
 
-8. pastikan pada file config/auth.php :
+7. running command -> php artisan serve
+
+8. untuk manage content toko, supplier, product, order, silahkan buka url http://127.0.0.1:8000/admin-panel
+
+9. pastikan pada file config/auth.php :
 'defaults' => [
     'guard' => 'web',
     'passwords' => 'users',
 ],
 
-6. setelah berhasil running seeder, login dengan credential berikut : admin / laravel-test
+10. setelah berhasil running seeder, login dengan credential berikut : admin / laravel-test
 
 ## REST API
 
@@ -34,3 +38,12 @@ untuk testing REST API dapat mengunduh file library postman yang sudah disediaka
         'guard' => 'api',
         'passwords' => 'stores',
     ],
+
+
+## DATABASE
+
+disini saya menyediakan opsi untuk menggunakan database yang sudah ada ataupun melakukan migration database dengan kondisi data kosong.
+
+jika ingin menggunakan database yang sudah ada, bisa didump file data.sql yang sudah saya sediakan di folder database/. 
+
+jika ingin menggunakan data kosong dari awal, dapat menjalankan command php artisan migrate seperti biasa
