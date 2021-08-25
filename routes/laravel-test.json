@@ -68,6 +68,61 @@
 			"response": []
 		},
 		{
+			"name": "Verifikasi Toko",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "nanda.giw@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "random_code",
+							"value": "GxFJ3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/store/email/verification",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store",
+						"email",
+						"verification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Toko - Login",
 			"request": {
 				"method": "POST",

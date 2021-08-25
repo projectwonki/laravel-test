@@ -226,6 +226,7 @@ class StoreController extends Controller
             $update_store = Store::find($check_verification->id);
 
             $update_store->random_code = str::random(5);
+            $update_store->is_active = 1;
             $update_store->updated_at = date('Y-m-d H:i:s');
             $update_store->email_verified_at = date('Y-m-d H:i:s');
             $update_store->save();
