@@ -41,7 +41,7 @@ class OrderController extends Controller
 
             $data_request =json_decode(json_encode($request->all()),TRUE);
 
-            // dd($data_request);
+            // dd($data_request, \Auth::guard('api')->id());
             $arr_answer = $data_request['data'];
 
             if ($data_request === []) {
@@ -62,7 +62,7 @@ class OrderController extends Controller
                 $new_order->store_id = \Auth::guard('api')->id();
                 $new_order->product_id = $row_dr['product_id'];
                 $new_order->order = $row_dr['order_total'];
-                $new_order->is_approve = 0;
+                $new_order->is_approve = '0';
                 $new_order->created_at = date('Y-m-d H:i:s');
                 $new_order->save();
 

@@ -357,7 +357,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9zdG9yZVwvbG9naW4iLCJpYXQiOjE2Mjk4NjU1MDgsImV4cCI6MTYyOTg2OTEwOCwibmJmIjoxNjI5ODY1NTA4LCJqdGkiOiI5UTh6SndNMU03VUhiUjNJIiwic3ViIjo3LCJwcnYiOiJlNWNiMzhiZjhkMjNkZDZlYThlYWI4MjBkOTU1NWU2Yjc0ZTY3NTRlIn0.L4vvksvnBILQcvKDYeqkY3038Jp-hdoUxxH8u82RbdU",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9zdG9yZVwvbG9naW4iLCJpYXQiOjE2Mjk4Njk0MjQsImV4cCI6MTYyOTg3MzAyNCwibmJmIjoxNjI5ODY5NDI0LCJqdGkiOiJmT1NaTENZUUZPUlhvQVhJIiwic3ViIjo3LCJwcnYiOiJlNWNiMzhiZjhkMjNkZDZlYThlYWI4MjBkOTU1NWU2Yjc0ZTY3NTRlIn0.Pa_2JCaWIkFySt8PcSftLtbIkCrCYruvKlTtD20bMC8",
 							"type": "string"
 						}
 					]
@@ -366,24 +366,29 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
+						"value": "application/json",
 						"type": "text"
 					},
 					{
 						"key": "Accept",
 						"value": "application/json",
-						"type": "text"
+						"type": "text",
+						"disabled": true
 					},
 					{
 						"key": "X-Requested-With",
 						"value": "XMLHttpRequest",
-						"type": "text",
-						"disabled": true
+						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"data\": [\n        {\n        \"product_id\": \"1\",\n        \"order\": 5,\n        },\n        {\n        \"product_id\": \"2\",\n        \"order\": 5,\n        },\n    ]\n}"
+					"raw": "{\n    \"data\": [\n        {\n        \"product_id\": 1,\n        \"order_total\": 5\n        },\n        {\n        \"product_id\": 2,\n        \"order_total\": 5\n        }\n        \n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
 				},
 				"url": {
 					"raw": "127.0.0.1:8000/api/store/orders",
