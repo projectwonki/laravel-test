@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "82d1ac1a-ad1f-4470-9838-8e0bb62f6d19",
+		"name": "Laravel Test - Toko Umat (nanda prasetyo)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Toko - Registrasi",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "nanda.giw@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "laravel-test",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "laravel-test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/store/registration",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Toko - Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "nanda.giw@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "laravel-test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/store/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Toko - Reset Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9zdG9yZVwvbG9naW4iLCJpYXQiOjE2Mjk4NjU1MDgsImV4cCI6MTYyOTg2OTEwOCwibmJmIjoxNjI5ODY1NTA4LCJqdGkiOiI5UTh6SndNMU03VUhiUjNJIiwic3ViIjo3LCJwcnYiOiJlNWNiMzhiZjhkMjNkZDZlYThlYWI4MjBkOTU1NWU2Yjc0ZTY3NTRlIn0.L4vvksvnBILQcvKDYeqkY3038Jp-hdoUxxH8u82RbdU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "nanda.giw@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "new_password",
+							"value": "laravel-test-1",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "laravel-test-1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/store/reset-password",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Semua Supplier Terdaftar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9zdG9yZVwvbG9naW4iLCJpYXQiOjE2Mjk4NjU1MDgsImV4cCI6MTYyOTg2OTEwOCwibmJmIjoxNjI5ODY1NTA4LCJqdGkiOiI5UTh6SndNMU03VUhiUjNJIiwic3ViIjo3LCJwcnYiOiJlNWNiMzhiZjhkMjNkZDZlYThlYWI4MjBkOTU1NWU2Yjc0ZTY3NTRlIn0.L4vvksvnBILQcvKDYeqkY3038Jp-hdoUxxH8u82RbdU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8000/api/store/suppliers",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store",
+						"suppliers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Semua Produk Dari Salah 1 Supplier",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9zdG9yZVwvbG9naW4iLCJpYXQiOjE2Mjk4NjU1MDgsImV4cCI6MTYyOTg2OTEwOCwibmJmIjoxNjI5ODY1NTA4LCJqdGkiOiI5UTh6SndNMU03VUhiUjNJIiwic3ViIjo3LCJwcnYiOiJlNWNiMzhiZjhkMjNkZDZlYThlYWI4MjBkOTU1NWU2Yjc0ZTY3NTRlIn0.L4vvksvnBILQcvKDYeqkY3038Jp-hdoUxxH8u82RbdU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8000/api/store/products/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Produk ke Salah 1 Supplier",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9zdG9yZVwvbG9naW4iLCJpYXQiOjE2Mjk4NjU1MDgsImV4cCI6MTYyOTg2OTEwOCwibmJmIjoxNjI5ODY1NTA4LCJqdGkiOiI5UTh6SndNMU03VUhiUjNJIiwic3ViIjo3LCJwcnYiOiJlNWNiMzhiZjhkMjNkZDZlYThlYWI4MjBkOTU1NWU2Yjc0ZTY3NTRlIn0.L4vvksvnBILQcvKDYeqkY3038Jp-hdoUxxH8u82RbdU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": [\n        {\n        \"product_id\": \"1\",\n        \"order\": 5,\n        },\n        {\n        \"product_id\": \"2\",\n        \"order\": 5,\n        },\n    ]\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/store/orders",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Produk yang Sudah Diorder dan Hanya yang Sudah Diapprove",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9zdG9yZVwvbG9naW4iLCJpYXQiOjE2Mjk4NjU1MDgsImV4cCI6MTYyOTg2OTEwOCwibmJmIjoxNjI5ODY1NTA4LCJqdGkiOiI5UTh6SndNMU03VUhiUjNJIiwic3ViIjo3LCJwcnYiOiJlNWNiMzhiZjhkMjNkZDZlYThlYWI4MjBkOTU1NWU2Yjc0ZTY3NTRlIn0.L4vvksvnBILQcvKDYeqkY3038Jp-hdoUxxH8u82RbdU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8000/api/store/products/order/disapprove",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store",
+						"products",
+						"order",
+						"disapprove"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -30,7 +30,7 @@ notes: untuk penggunaan database yang sudah ada dapat dilihat petunjuk pada sect
 
 ## REST API
 
-untuk testing REST API dapat mengunduh file library postman yang sudah disediakan didalam folder routes/api
+untuk testing REST API dapat mengunduh file library postman yang sudah disediakan didalam folder routes/
 
 1. sebelum melakukan testing rest api pada postman, pastikan terlebih dahulu untuk file config/auth.php seperti ini :
 
