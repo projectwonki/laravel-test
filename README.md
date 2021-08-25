@@ -63,3 +63,12 @@ untuk role lainnya bisa menggunakan credential berikut :
 ## OBSTACLE && ISSUE
 
 1. terdapat kesulitan dalam proses pengiriman email perihal verifikasi data. sudah dicoba testing pakai SMTP yang benar tapi masih tetap belum berhasil terkirim emailnya
+
+2. karena keterbatasan waktu, untuk handling manajemen data supplier, toko, product, dan order, bisa diakses di url http://127.0.0.1:8000/admin-panel dengan credential yang telah disebutkan  di section CMS
+
+
+Terima kasih atas kesempatan dan perhatiannya.
+
+Regards,
+
+Nanda Prasetyo
