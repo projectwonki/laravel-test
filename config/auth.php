@@ -14,8 +14,8 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'api',
-        'passwords' => 'stores',
+        'guard' => 'web',
+        'passwords' => 'users',
     ],
 
     /*

@@ -51,3 +51,15 @@ jika ingin menggunakan data kosong dari awal, dapat menjalankan command php arti
 ## CMS
 
 untuk mengakses manajemen role, bisa menggunakan credential berikut : root / root123
+
+untuk role lainnya bisa menggunakan credential berikut :
+
+1. user role ADMIN : admin / laravel-test
+
+2. user role TOKO : toko / laravel-test
+
+3. user role SUPPLIER : supplier / laravel-test
+
+## OBSTACLE && ISSUE
+
+1. terdapat kesulitan dalam proses pengiriman email perihal verifikasi data. sudah dicoba testing pakai SMTP yang benar tapi masih tetap belum berhasil terkirim emailnya
